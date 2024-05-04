@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #gallery {
+            margin: 2em;
+        }
+
+        .filter {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 1em;
+            justify-content: center; /* Center the filter buttons */
+        }
+
+        .filter-btn {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #555;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Increased gap between images */
+            justify-content: center; /* Center the images */
+        }
+
+        .image {
+            width: 225px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            display: block;
+            border-radius: 5px;
+            object-fit: cover;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="gallery">
+        <div class="filter">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Mystic Aura</button>
+            <button class="filter-btn" data-filter="city">Aqua Blue</button>
+            <button class="filter-btn" data-filter="animals">Sapphire Waves</button>
+           <a href="intro.html"> <button class="filter-btn" data-filter="animals">Back</button></a>
+        </div>
+
+        <div class="image-container">
+            <div class="image nature">
+                <img src="/pict/1.jpeg" alt="Nature 1">
+                <img src="/pict/2.jpeg" alt="Nature2">
+                <img src="/pict/3.jpeg" alt="Nature3">
+                <img src="/pict/4.jpeg" alt="Nature4">
+                <!-- Add more nature images with appropriate alt text -->
+            </div>
+            <div class="image city">
+                <img src="/pict/bem.jpeg" alt="city 1">
+                <img src="/pict/2i.jpeg" alt="city2">
+                <img src="/pict/3i.jpeg" alt="city3">
+                <img src="/pict/4i.jpeg" alt="city4">
+                <!-- Add more city images with appropriate alt text -->
+            </div>
+            <div class="image animals">
+                <img src="/pict/1m.jpeg" alt="animals1">
+                <img src="/pict/5m.jpeg" alt="animals2">
+                <img src="/pict/3m.jpeg" alt="animals3">
+                <img src="/pict/4m.jpeg" alt="animals4">
+                <!-- Add more animals images with appropriate alt text -->
+            </div>
+            <!-- Add more images with appropriate categories -->
+           
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const imageContainer = document.querySelector('.image-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', filterImages);
+            });
+
+            function filterImages(e) {
+                const category = e.target.getAttribute('data-filter');
+                const images = document.querySelectorAll('.image');
+
+                images.forEach(image => {
+                    image.style.display = 'none';
+
+                    if (category === 'all' || image.classList.contains(category)) {
+                        image.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

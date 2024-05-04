@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/intro.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic"><b>Address</b></div>
+          <div class="text-one">Sindanglaya</div>
+          <div class="text-two">NO.35</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic"><b>Phone</b></div>
+          <div class="text-one">+62 895 1562 9112</div>
+          <div class="text-two">WA; 0895 1562 9112</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic"><b>Email</b></div>
+          <div class="text-one">agungginanjarr11@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+       
+        <h1 class="ag"><i>AGUNG GINANJAR</i></h1> 
+        <div class="topic-text">send me a message</div>
+        <p> jika ada pertanyaan,akan saya sediakan jawaban bukan harapan</p> 
+           <br><br>
+    <a href="/intro.html"><button class="back-button">Back</button></a>
+      </div>
+    </div>
+  </div>
+<style>
+  /* contact */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #4169E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px ;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+
+}
+.button {
+    display: inline-block;
+    padding:0px;
+    background-color: rgb(174, 174, 174);
+    color: rgb(227, 17, 17);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #444;
+  }
+
+  .ag {
+    opacity: 0;
+    animation: imageAni 1s ease forwards;
+    animation-delay: 1.s;
+}
+
+</style>
+</body>
+</html>

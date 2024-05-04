@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+  </head>
+ 
+
+  <body>
+   <div class="numb">
+      0%
+   </div>
+   <div class="circle">
+      <div class="dot">
+     
+
+<div class="text-box">
+    <hr>
+<div class="horizontal-line"></div>
+    <h1>AgungBOT</h1>
+  
+        <body>
+        
+        <span style='font-size:100px;'>&#128187;</span>
+        
+        <input type="text" id="input" placeholder="Type a message...">
+        <button id="submit">Send</button>
+        <a href="/intro.html"><button class="back-button">Back</button></a>
+        <p>Jawaban :</p>
+        <div id="output"></div>
+        <script src="/chatbot.js"></script>
+        <div class="horizontal-line"></div>
+    <br>
+    <p>Seputar pertanyaan Terkait Dengan Saya</p>
+    <p><b>pertanyaan yang akan saya jawab hanya pertanyaan di bawah ini!</b> </p>
+       <p>simak terlebih dahulu videonya..</p> 
+          <div class="center">
+       <div class="video-player">
+         <video id="video" width="90%" height="100%" controls>
+            <source src="/pict/agungbot.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      </div>
+   </div>
+
+         </div>
+  </body>
+</html>
+
+<style>
+   
+   body {
+          font-size: 20px;
+        }
+        .horizontal-line {
+       border-top: 1px solid #ccc;
+       width: 100%;
+       height: 1px;
+        }
+.video-player {
+	position: relative;
+	width: 640px;
+	height: 360px;
+  
+}
+
+.controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.controls button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.controls button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+#progress-bar {
+	width: 100%;
+	height: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+</style>
+<script>
+   const numb = document.querySelector(".numb");
+   let counter = 0;
+   setInterval(()=>{
+     if(counter == 100){
+       clearInterval();
+     }else{
+       counter+=1;
+       numb.textContent = counter + "%";
+     }
+   }, 80);
+</script>
